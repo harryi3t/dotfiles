@@ -1,3 +1,4 @@
+rm -rf ~/.vim/*
 mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 mkdir -p ~/.vim/colors
