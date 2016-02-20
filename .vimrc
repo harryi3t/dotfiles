@@ -41,6 +41,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_sh_checkers = ['shellcheck']
 
+let g:ctrlp_open_multiple_files = 'r'
 set foldmethod=indent
 set foldlevel=3
 set cindent
@@ -88,3 +89,19 @@ noremap <leader>4 :set foldlevel=4<CR>
 noremap <leader>5 :set foldlevel=5<CR>
 noremap <leader>6 :set foldlevel=6<CR>
 noremap <leader>q :bd<CR>
+
+" Setup some default ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+  \}
+
+" Use the nearest .git directory as the cwd. It also supports works with .svn, .hg, .bzr.
+let g:ctrlp_working_path_mode = 'r'
+
+" Easy bindings for its various modes
+nnoremap <leader>bf :CtrlPCurFile<cr>
+nnoremap <leader>bd :CtrlPCurWD<cr>
+nnoremap <leader>ca :lcd ~/Shippable/api<cr>
+nnoremap <leader>cw :lcd ~/Shippable/www<cr>
+let g:ctrlp_working_path_mode = 0
