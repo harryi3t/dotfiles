@@ -65,7 +65,6 @@ set laststatus=2
 colorscheme termschool
 let g:airline#extensions#tabline#enabled = 1
 let &colorcolumn=join(range(81,81),",")
-set listchars=tab:▸\ ,trail:·
 set list
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
